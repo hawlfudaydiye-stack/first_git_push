@@ -98,62 +98,90 @@
 # big_truck = Booyad()
 # big_truck.sifo_guud()
 # big_truck.dhawaaq()
+#
+# from abc import ABC, abstractmethod
+# class LacagBixin(ABC):
+#         @abstractmethod
+#         def dollor(self):
+#             pass
+#
+#         @abstractmethod
+#         def SHILLING(self):
+#             pass
+#
+#
+# from abc import ABC, abstractmethod  # Tani waa khasab
+#
+#
+# # 1. Waalidka (Abstract Class)
+# class LacagBixin(ABC):
+#
+#     @abstractmethod
+#     def dollor(self):
+#         pass
+#
+#     @abstractmethod
+#     def SHILLING(self):
+#         pass
+#
+#
+# # 2. Bakhaarka (Subclass)
+# class Bakhaar(LacagBixin):
+#     def dollor(self):
+#         print("Bakhaarku: Waad mahadsantahay maadaama aad sidatid Dollar. Soo dhowow!")
+#
+#     def SHILLING(self):
+#         print("Bakhaarka: Maya, anigu Shillin ma rabo, sorry!")
+#
+#
+# # 3. Shop Yar (Subclass)
+# class Shop_yar(LacagBixin):
+#     def dollor(self):
+#         print("Shop: Maya, anigu keliya waxaan qaataa Shillin, Dollar ma rabo!")
+#
+#     def SHILLING(self):
+#         print("Shop: Soo dhawoow maadaama aad haysatid Shillin.")
+#
+#
+# # --- Wicitaanka (Execution) ---
+#
+# bakhaar = Bakhaar()
+# bakhaar.dollor()
+# bakhaar.SHILLING()
+#
+# print("-" * 20)  # Kala saare
+#
+# shop = Shop_yar()
+# shop.dollor()
+# shop.SHILLING()
 
 from abc import ABC, abstractmethod
-class LacagBixin(ABC):
-        @abstractmethod
-        def dollor(self):
-            pass
 
-        @abstractmethod
-        def SHILLING(self):
-            pass
-
-
-from abc import ABC, abstractmethod  # Tani waa khasab
-
-
-# 1. Waalidka (Abstract Class)
-class LacagBixin(ABC):
-
+# Tani waa naqshadda (Waalidka la qariyay)
+class Greet(ABC):
     @abstractmethod
-    def dollor(self):
-        pass
+    def say_hello(self):
+        pass  # Waa shaqo madhan oo la qariyay (Abstract method)
 
-    @abstractmethod
-    def SHILLING(self):
-        pass
+# Tani waa Class-ka dhabta ah ee hirgelinaya naqshadda
+class English(Greet):
+    def say_hello(self):
+        print("hello")
 
-
-# 2. Bakhaarka (Subclass)
-class Bakhaar(LacagBixin):
-    def dollor(self):
-        print("Bakhaarku: Waad mahadsantahay maadaama aad sidatid Dollar. Soo dhowow!")
-
-    def SHILLING(self):
-        print("Bakhaarka: Maya, anigu Shillin ma rabo, sorry!")
+# Tijaabo:
+g = English()
+# print(g.say_hello())
+g.say_hello()
 
 
-# 3. Shop Yar (Subclass)
-class Shop_yar(LacagBixin):
-    def dollor(self):
-        print("Shop: Maya, anigu keliya waxaan qaataa Shillin, Dollar ma rabo!")
-
-    def SHILLING(self):
-        print("Shop: Soo dhawoow maadaama aad haysatid Shillin.")
 
 
-# --- Wicitaanka (Execution) ---
 
-bakhaar = Bakhaar()
-bakhaar.dollor()
-bakhaar.SHILLING()
 
-print("-" * 20)  # Kala saare
 
-shop = Shop_yar()
-shop.dollor()
-shop.SHILLING()
+
+
+
 
 
 
